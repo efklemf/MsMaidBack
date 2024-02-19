@@ -12,7 +12,12 @@ const cors=require('cors');
 
 app.use(express.json());
 // Cors enable
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://frontend-msmaid.onrender.com' || `http://localhost:3000`|| 'https://backend-msmaid.onrender.com',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 // Resgistration part
 app.post('/register',async(req,res)=>{
   try {
