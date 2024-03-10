@@ -14,7 +14,7 @@ app.use(express.json());
 // Cors enable
 
 app.use(cors({
-  origin: 'https://frontend-msmaid.onrender.com' || `http://localhost:3000`|| 'https://backend-msmaid.onrender.com',
+  origin: ['https://frontend-msmaid.onrender.com' , `http://localhost:3000`, 'https://backend-msmaid.onrender.com'],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
